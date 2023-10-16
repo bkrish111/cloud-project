@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const WebServices = require('aws-sdk');
-WebServices.config.update({ region: 'us-west-1' });
+WebServices.config.update({ region: 'us-east-1' });
 const dataupload = require('express-fileupload');
 let cross = require('cors');
 const port = 3001
@@ -17,15 +17,15 @@ app.use(dataupload({
   tempFileDir: 'tmp'
 }));
 const Storage = new WebServices.S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  accessKeyId: "AKIARTB6N2O4FOFT3MWA",
+  secretAccessKey: "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"
 });
 
 const Database = new WebServices.DynamoDB({ apiVersion: '2012-08-10' ,
-    region: "us-west-1",
-    endpoint: "http://dynamodb.us-west-1.amazonaws.com",
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY});
+    region: "us-east-1",
+    endpoint: "http://dynamodb.us-east-1.amazonaws.com",
+    accessKeyId: "AKIARTB6N2O4FOFT3MWA",
+    secretAccessKey: "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"});
 
 function deletefiles(file_path) {
   try {
@@ -42,7 +42,7 @@ app.post('/upload_file', function (req, res) {
   const fileData = dbsystem.createReadStream(req.files.inputFile.tempFilePath);
 
   const storage_params = {
-    Bucket: "sanketh-dropbox",
+    Bucket: "bhargav491",
     Key: req.files.inputFile.name,
     ContentType: req.files.inputFile.mimetype,
     Body: fileData
@@ -127,10 +127,10 @@ function putItem(userId, userName, fileName, description, fileCreationTime) {
 }
 app.get('/getAdminData', function (req, res) {
   WebServices.config.update({
-    region: "us-west-1",
-    endpoint: "http://dynamodb.us-west-1.amazonaws.com",
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    region: "us-east-1",
+    endpoint: "http://dynamodb.us-east-1.amazonaws.com",
+    accessKeyId: "AKIARTB6N2O4FOFT3MWA",
+    secretAccessKey: "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"
   });
   
   var clientDoc = new WebServices.DynamoDB.DocumentClient();
@@ -152,10 +152,10 @@ app.get('/getAdminData', function (req, res) {
 });
 app.get('/getUserData/:userName', function (req, res) {
   WebServices.config.update({
-    region: "us-west-1",
-    endpoint: "http://dynamodb.us-west-1.amazonaws.com",
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    region: "us-east-1",
+    endpoint: "http://dynamodb.us-east-1.amazonaws.com",
+    accessKeyId: "AKIARTB6N2O4FOFT3MWA",
+    secretAccessKey: "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"
   });
   
   var documentClient = new WebServices.DynamoDB.DocumentClient();
@@ -177,6 +177,7 @@ app.get('/getUserData/:userName', function (req, res) {
   
   documentClient.scan(parameters, function(err, data) {
       if (err) {
+          console.log(AKIARTB6N2O4FOFT3MWA)
           console.error("Cannot able to read JSON data:", JSON.stringify(err, null, 2));
           return res.status(500).send(`Can not get the data. ${err}`)
       } else {
@@ -196,7 +197,7 @@ app.delete('/remove_data', function (req, res) {
   const userId = req.body.userId
   // Setting up S3 delete parameters
   const params = {
-    Bucket: "sanketh-dropbox",
+    Bucket: "bhargav491",
     Key: fileDeletePath
   };
   // Deleting files to the bucket
