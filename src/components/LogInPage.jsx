@@ -15,16 +15,16 @@ function LogInPage() {
             <Navbar bg="primary" variant="dark" style={{ 
             backgroundImage: `url("https://avatars.githubusercontent.com/u/30351660?s=280&v=4")` 
           }}>
-                <Navbar.Brand class="justify-content-end">Sanketh-cloud</Navbar.Brand>
+                <Navbar.Brand class="justify-content-end">Bhargav-cloud</Navbar.Brand>
             </Navbar>
             <Card style={{ width: '30rem', margin: "200px", justifyContent: "justify-content-center"}}>
                 <Card.Header style={{
-        backgroundColor: '#A5D6A7'}}>Introducing Sanketh-Cloud App...!</Card.Header>
+        backgroundColor: '#A5D6A7'}}>Introducing Bhargav-Cloud App...!</Card.Header>
                 <Card.Body style={{
         backgroundColor: '#26A69A'}}>
                     <Card.Text>Click the Button Below</Card.Text>
-                    <Button  variant="primary" href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=token&scope=email+openid+phone+profile&redirect_uri=http://localhost:80/">
-                        LogIn / SignUp  { <a href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=code&scope=email+openid+phone+profile&redirect_uri=http://localhost:80/"></a> }
+                    <Button  variant="primary" href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=token&scope=email+openid+phone+profile&redirect_uri=http://3.145.100.115:80/">
+                        LogIn / SignUp  { <a href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=code&scope=email+openid+phone+profile&redirect_uri=http://3.145.100.115:80/"></a> }
                     </Button>
                 </Card.Body>
             </Card>

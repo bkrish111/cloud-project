@@ -12,7 +12,7 @@ export const dataService = {
 }
 
 export const apiConfig = {
-    backendURL: "http://localhost:3001"
+    backendURL: "http://3.145.100.115:3001"
 }
 function admin_data() {
 
