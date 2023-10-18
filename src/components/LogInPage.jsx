@@ -23,10 +23,11 @@ function LogInPage() {
                 <Card.Body style={{
         backgroundColor: '#26A69A'}}>
                     <Card.Text>Click the Button Below</Card.Text>
-                    <Button  variant="primary" href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=token&scope=email+openid+phone+profile&redirect_uri=http://localhost:80/">
-                        LogIn / SignUp  { <a href="https://sanketh-dropbox.auth.us-west-1.amazoncognito.com/login?client_id=l5qirgu7eubs9btbr0s4o7e7t&response_type=code&scope=email+openid+phone+profile&redirect_uri=http://localhost:80/"></a> }
+                    <Button  variant="primary" href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/login?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fbhargavcloud.me">
+                        LogIn / SignUp  { <a href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/login?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fbhargavcloud.me"></a> }
                     </Button>
                 </Card.Body>
+                
             </Card>
             </div>
 
