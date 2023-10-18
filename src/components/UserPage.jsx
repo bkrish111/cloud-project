@@ -84,7 +84,7 @@ class UserPage extends PureComponent {
     
 
     downloadOnClick(file) {
-        window.open("https://d3ap8en199dpxn.cloudfront.net/" + file);
+        window.open("https://d115ngxzns1j5.cloudfront.net/" + file);
     }
 
     deleteOnClick(fileName, id) {

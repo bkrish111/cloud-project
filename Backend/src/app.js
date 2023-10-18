@@ -42,7 +42,7 @@ app.post('/upload_file', function (req, res) {
   const fileData = dbsystem.createReadStream(req.files.inputFile.tempFilePath);
 
   const storage_params = {
-    Bucket: "bhargav491",
+    Bucket: "origin123",
     Key: req.files.inputFile.name,
     ContentType: req.files.inputFile.mimetype,
     Body: fileData
@@ -78,7 +78,7 @@ app.post('/upload_file', function (req, res) {
     console.log(`description: ${desp}`)
 
     Database.scan({
-      TableName: 'dropbox-files-table',
+      TableName: 'users',
     }, function (err, data) {
       if (err) {
         console.log("Error", err);
@@ -105,7 +105,7 @@ app.post('/upload_file', function (req, res) {
 
 function putItem(userId, userName, fileName, description, fileCreationTime) {
   const dbdata_params = {
-    TableName: 'dropbox-files-table',
+    TableName: 'users',
     Item: {
       'userId': { S: userId },
       'userName': { S: userName },
@@ -135,7 +135,7 @@ app.get('/getAdminData', function (req, res) {
   
   var clientDoc = new WebServices.DynamoDB.DocumentClient();
   var params = {
-    TableName: 'dropbox-files-table',
+    TableName: 'users',
   };
 
   // Call DynamoDB to read the item from the table
@@ -160,7 +160,7 @@ app.get('/getUserData/:userName', function (req, res) {
   
   var documentClient = new WebServices.DynamoDB.DocumentClient();
   
-  var table = "dropbox-files-table";
+  var table = "users";
   const userName = req.params.userName
   console.log("userName:"+userName)
   var parameters = {
@@ -197,7 +197,7 @@ app.delete('/remove_data', function (req, res) {
   const userId = req.body.userId
   // Setting up S3 delete parameters
   const params = {
-    Bucket: "bhargav491",
+    Bucket: "origin123",
     Key: fileDeletePath
   };
   // Deleting files to the bucket
@@ -214,7 +214,7 @@ app.delete('/remove_data', function (req, res) {
 
   function dataBaseDelete() {
     const ddbparams = {
-      TableName: 'dropbox-files-table',
+      TableName: 'users',
       Key: {
         "userId": { "S": userId }
 
