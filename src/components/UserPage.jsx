@@ -119,7 +119,7 @@ class UserPage extends PureComponent {
                 backgroundImage: `url("https://img.freepik.com/free-vector/cloud-network-system-background-vector-social-media-banner_53876-111844.jpg")` 
               }}>
                <Navbar className="justify-content-center" style={{
-        backgroundColor: '#F3E5F5'}}  ><img src={logo} width = '80' height = '50' /><h1>Sanketh-Cloud</h1><img src={logo} width = '80' height = '50' /></Navbar> 
+        backgroundColor: '#F3E5F5'}}  ><img src={logo} width = '80' height = '50' /><h1>Bhargav-Cloud</h1><img src={logo} width = '80' height = '50' /></Navbar> 
                 <Navbar bg="info" color='green'>
                     <Navbar.Brand>Account Details</Navbar.Brand>
                     <Navbar.Collapse className="justify-content-end">
