@@ -20,13 +20,12 @@ function LogInPage() {
             <Card style={{ width: '30rem', margin: "200px", justifyContent: "justify-content-center"}}>
                 <Card.Header style={{
         backgroundColor: '#A5D6A7'}}>Introducing Bhargav-Cloud App...!</Card.Header>
-                <Card.Body style={{
-        backgroundColor: '#26A69A'}}>
-                    <Card.Text>Click the Button Below</Card.Text>
-                    <Button  variant="primary" href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/login?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fbhargavcloud.me">
-                        LogIn / SignUp  { <a href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/login?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fbhargavcloud.me"></a> }
-                    </Button>
-                </Card.Body>
+                <Card.Body style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                    <Card.Text></Card.Text>
+                    <Button variant="success" href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fdropbox.bhargavcloud.me">
+                Sign In / Sign Up
+             </Button>
+        </Card.Body>
                 
             </Card>
             </div>
