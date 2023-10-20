@@ -6,6 +6,7 @@ import { useRouteMatch } from 'react-router-dom';
 function LogInPage() {
     let { path, url, location } = useRouteMatch();
     const host=window.location.host
+
     return (
         
         <div style={{ 
@@ -22,9 +23,11 @@ function LogInPage() {
         backgroundColor: '#A5D6A7'}}>Introducing Bhargav-Cloud App...!</Card.Header>
                 <Card.Body style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Card.Text></Card.Text>
-                    <Button variant="success" href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fdropbox.bhargavcloud.me">
+                    <Button variant="success" href="https://bhargavcloud.auth.us-east-2.amazoncognito.com/login?client_id=6quvjf6a9li8nki8fv0h50g36n&response_type=token&scope=email+openid+phone+profile&redirect_uri=https%3A%2F%2Fb6a0-160-238-75-16.ngrok-free.app">
                 Sign In / Sign Up
              </Button>
+             
+            
         </Card.Body>
                 
             </Card>
@@ -34,5 +37,6 @@ function LogInPage() {
 
     )
 }
+console.log(window.location.hash)
 
 export default LogInPage
