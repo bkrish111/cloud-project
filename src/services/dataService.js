@@ -12,7 +12,7 @@ export const dataService = {
 }
 
 export const apiConfig = {
-    backendURL: "http://localhost:3001"
+    backendURL: "https://dropboxone.bhargavcloud.me/api"
 }
 function admin_data() {
 
